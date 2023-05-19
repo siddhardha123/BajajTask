@@ -43,15 +43,16 @@ const EmployeeList = ({ employees }: any) => {
           Show All Employees
         </button>
       )}
-      <div className="grid grid-cols-3 gap-3 grid-rows-4">
-        {displayedEmployees.length > 0 ? (
-          displayedEmployees.map((employee: any) => (
-            <EmployeeCard key={employee.id} employee={employee} />
-          ))
-        ) : (
-          <p>No matching employees found.</p>
-        )}
-      </div>
+     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+  {displayedEmployees.length > 0 ? (
+    displayedEmployees.map((employee: any) => (
+      <EmployeeCard key={employee.id} employee={employee} />
+    ))
+  ) : (
+    <p>No matching employees found.</p>
+  )}
+</div>
+
     </div>
   );
 };
